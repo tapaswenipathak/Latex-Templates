@@ -1,0 +1,64 @@
+% LaTeX Template for Project Report, Version 1.0
+%
+% Released under Creative Commons Attribution license (CC-BY)
+% Info: http://creativecommons.org/licenses/by/3.0/
+%
+% By: Tapasweni Pathak
+% BTech IT (2010 - 2014)
+% IGIT Delhi
+% Contact Info: tapaswenipathak@gmail.com
+%\geometry{a4paper}
+% It is advisable to learn the basics of LaTeX before using this template.
+% A good resource to start with is http://en.wikibooks.org/wiki/LaTeX/
+%
+% All template fields are marked with a pair of angular brackets e.g. <input here>
+%
+% Empty space after chapter/section/subsection titles can be used to insert text.
+%
+% Compile this file to get the output.
+%
+%Used Kile Version 2.0.85, using KDE Development Platform 4.4.5 (KDE 4.4.5)
+%
+%There is one error, finished with exit code 1, will try to remove it. BTW it is not having any bad effect on the report.pdf generated.
+
+
+
+\documentclass[12pt,a4paper]{report}
+\setcounter{secnumdepth}{3}
+\usepackage{geometry}
+\usepackage{wrapfig}
+\geometry{a4paper}
+\usepackage[pdftex]{graphicx} %for embedding images
+\usepackage{url} %for proper url entries
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+
+\begin{document}
+\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
+
+%include other pages
+\input{title}
+\input{undertaking}
+\input{certificate}
+\input{acknowledgement}
+\input{abstract}
+
+
+\pagenumbering{roman} %numbering before main content starts
+\tableofcontents
+\listoffigures
+
+
+\newpage
+\pagenumbering{arabic} %reset numbering to normal for the main content
+
+%pages according to the floowing sequence
+\input{problem-definition} 
+\input{related-work} %work done by other on the related things
+\input{proposed-approach} 
+\input{performance-model}
+\input{conclusion}
+\input{future-work}
+\input{references}
+
+\end{document}
